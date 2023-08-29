@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* color */
+  --txcolor: #242424;
+  --bgcolor: #fafafa;
+  --cardbgcolor: #f1f1f1;
+  --cardBoxShadow: #33333330;
+}
+body {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  /* display: flex; */
+  justify-content: center;
+  align-content: start;
+  background-color: var(--bgcolor);
+}
+.hidden {
+  display: none !important;
+}

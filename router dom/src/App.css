@@ -1,0 +1,155 @@
+npm :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  margin: 0 auto 60px;
+  gap: 10px;
+  align-items: center;
+}
+
+nav h1 {
+  margin-right: auto;
+}
+
+nav a {
+  color: #333;
+  padding: 4px 10px;
+  text-decoration: none;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  box-shadow: inset 0 2px 5px #8f8f8f;
+}
+nav a.active {
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-control {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-control span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control input,
+textarea {
+  padding: 5px 8px;
+  font-family: inherit;
+  width: 100%;
+  resize: none;
+  font-size: 20px;
+}
+
+.button {
+  background: #848484;
+  border: 0;
+  padding: 8px 15px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.button:hover {
+  background: #848484d2;
+}
+/* //Page Not Found */
+.pageNotFound-container {
+  text-align: center;
+}
+
+.pageNotFound-container p {
+  text-align: justify;
+}
+
+.pageNotFound-container a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 8px;
+  border: 2px solid #333;
+  background-color: #fff;
+}
+
+.pageNotFound-container a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* //Articles */
+.article-container .card {
+  padding: 10px 30px;
+  border: 1px solid #4e4e4e;
+  border-radius: 4px;
+  box-shadow: 2px 4px 6px #00000080;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  position: relative;
+}
+
+.article-container .card:hover {
+  scale: 1.005;
+  transition: 0.2s;
+  color: #f1f1f1;
+}
+
+.article-container .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: cornflowerblue;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+}
+
+.article-container .card:hover::before {
+  transform: scaleX(1);
+}
+.card:hover a {
+  color: white;
+}
+.ar-det-img {
+  width: 100%;
+  object-fit: cover;
+}
+/* BREAD CRUMBS */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.breadcrumbs > * {
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumbs .crumb:after {
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: #333;
+}
