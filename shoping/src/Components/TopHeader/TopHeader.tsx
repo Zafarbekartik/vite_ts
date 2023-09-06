@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 import "./TopHeader.css";
 
 function TopHeader() {
+  const navigate = useNavigate();
   return (
     <div className="topheaderbox">
       <div>
@@ -8,16 +11,31 @@ function TopHeader() {
           <div className="item1">
             <p>Joylashuv</p>
           </div>
-          <div className="item2">
+          <div
+            className="item2"
+            onClick={() => {
+              navigate("/Manzil");
+            }}
+          >
             <p>Manzil</p>
           </div>
           <div className="item3">
             <p>Chegirmalar</p>
           </div>
-          <div className="item4">
+          <div
+            className="item4"
+            onClick={() => {
+              navigate("/SavolJavob");
+            }}
+          >
             <p>Savol-Javoblar</p>
           </div>
-          <div className="item5">
+          <div
+            className="item5"
+            onClick={() => {
+              navigate("/Buyurtmalarim");
+            }}
+          >
             <p>Buyurtmalarim</p>
           </div>
           <div className="item6">

@@ -1,22 +1,30 @@
 import "./TopCatalog.css";
-import { UseFetch } from "../API/UseFetch/UseFetch";
+import { useFetch } from "../API/UseFetch/useFetch";
+import Load from "../Loading/Load";
 import { v4 as uuidv4 } from "uuid";
+import { NavLink } from "react-router-dom";
 
 function TopCatalog() {
-  UseFetch("https://dummyjson.com/products");
-  const data = JSON.parse(localStorage.getItem("Market"));
+  const { categoryNames: data, isPending } = useFetch(
+    "https://dummyjson.com/products"
+  );
+
   return (
-    <div className="TopCatalog">
-      {data &&
-        data.map((product) => {
-          return (
-            <div key={uuidv4()}>
-              <div className="product">
-                <img src={product.images[0]} alt={product.title} />
-              </div>
-            </div>
-          );
-        })}
+    <div className="catalogBox">
+      {isPending ? (
+        <Load />
+      ) : (
+        <ul className="catalogName">
+          {data &&
+            data.map((product) => {
+              return (
+                <li key={uuidv4()}>
+                  <NavLink to={"/" + product}>{product}</NavLink>
+                </li>
+              );
+            })}
+        </ul>
+      )}
     </div>
   );
 }

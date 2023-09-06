@@ -1,0 +1,59 @@
+.CatalogBox {
+  max-width: 1200px;
+  height: 50px;
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.CatalogBox .product {
+  color: var(--txcolor);
+  width: calc(20% - 20px);
+  margin: 10px;
+  background-color: var(--cardbgcolor);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: start;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  transition: 0.3s;
+}
+.CatalogBox .product:hover {
+  box-shadow: 0 10px 20px #33333333;
+}
+
+.CatalogBox .product > img {
+  width: 100%;
+  height: 250px;
+  border-radius: 4px 4px 0 0;
+}
+.CatalogBox h3 {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .CatalogBox .product {
+    width: calc(25% - 20px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .CatalogBox .product {
+    width: calc(33% - 20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .CatalogBox .product {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .CatalogBox .product {
+    width: calc(100% - 20px);
+  }
+}

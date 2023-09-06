@@ -1,11 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import "./GlobalHeader.css";
 
 function GlobalHeader() {
+  const navigate = useNavigate();
   return (
     <div className="globalheader">
       <div className="headerwrapper">
         <div className="wrapperleft">
-          <div className="logotip">
+          <div
+            className="logotip"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <h3
               style={{
                 color: "mediumslateblue",
@@ -49,7 +56,12 @@ function GlobalHeader() {
           </button>
         </div>
         <div className="wrapperright">
-          <div className="profil">
+          <div
+            className="profil"
+            onClick={() => {
+              navigate("/Account");
+            }}
+          >
             <div className="btn">
               <i
                 className="fa-solid fa-user"
@@ -60,7 +72,12 @@ function GlobalHeader() {
               ></i>
             </div>
           </div>
-          <div className="likedaproducts">
+          <div
+            className="likedaproducts"
+            onClick={() => {
+              navigate("/Yoqtirilgan");
+            }}
+          >
             <div className="btn">
               <i
                 className="fa-solid fa-heart"
@@ -78,7 +95,12 @@ function GlobalHeader() {
               Yoqtirilgan
             </p>
           </div>
-          <div className="basket">
+          <div
+            className="basket"
+            onClick={() => {
+              navigate("/Savat");
+            }}
+          >
             <div className="btn">
               <i
                 className="fa-solid fa-cart-plus"
