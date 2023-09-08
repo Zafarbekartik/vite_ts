@@ -1,0 +1,20 @@
+.Footer {
+  margin-left: calc(50% - 55px);
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Footer a {
+  color: #fff;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px 20px;
+  background-color: crimson;
+  text-decoration: none;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s;
+}

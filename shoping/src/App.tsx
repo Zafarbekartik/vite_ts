@@ -6,7 +6,6 @@ import GlobalHeader from "./Components/GlobalHeader/GlobalHeader";
 import TopCatalog from "./Components/TopCatalog/TopCatalog";
 import Home from "./Pages/Home/Home";
 import Account from "./Pages/Account/Account";
-import Catalog from "./Pages/Catalog/Catalog";
 import Savat from "./Pages/Savat/Savat";
 import Yoqtirilgan from "./Pages/Yoqtirilgan/Yoqtirilgan";
 import Manzil from "./Pages/Manzil/Manzil";
@@ -15,6 +14,8 @@ import SavolJavob from "./Pages/SavolJavoblar/SavolJavob";
 
 //React-Router-Dom
 import { Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
+import Developer from "./Pages/Developer/Developer";
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
         <Route path="/Manzil" element={<Manzil />} />
         <Route path="/SavolJavob" element={<SavolJavob />} />
         <Route path="/Buyurtmalarim" element={<Buyurtmalarim />} />
+        <Route path="/Developer" element={<Developer />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

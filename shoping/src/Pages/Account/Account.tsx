@@ -1,9 +1,9 @@
-import React from "react";
+import "./Account.css";
 
 function Account() {
   return (
     <div className="Account">
-      Account
+      <h4>Account</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque odio
         animi molestiae ex deleniti temporibus recusandae, reiciendis quos

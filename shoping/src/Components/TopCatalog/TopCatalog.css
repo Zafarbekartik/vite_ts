@@ -27,6 +27,7 @@
   color: #333333aa;
   padding-bottom: 6px;
   transition: 0.2s;
+  user-select: none;
 }
 
 .catalogBox li > a:hover {

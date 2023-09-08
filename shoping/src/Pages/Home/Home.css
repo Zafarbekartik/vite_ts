@@ -1,10 +1,10 @@
 .CatalogBox {
   max-width: 1200px;
-  height: 50px;
   display: flex;
   margin-top: 30px;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0px auto;
+  margin-bottom: 27px;
 }
 .CatalogBox .product {
   color: var(--txcolor);
@@ -20,15 +20,19 @@
   box-sizing: border-box;
   padding: 10px;
   transition: 0.3s;
+  user-select: none;
 }
 .CatalogBox .product:hover {
   box-shadow: 0 10px 20px #33333333;
+  scale: 1.05;
 }
 
 .CatalogBox .product > img {
   width: 100%;
   height: 250px;
   border-radius: 4px 4px 0 0;
+  /* user-select: none; */
+  pointer-events: none;
 }
 .CatalogBox h3 {
   margin-top: 10px;

@@ -19,7 +19,16 @@ body {
   justify-content: center;
   align-content: start;
   background-color: var(--bgcolor);
+  overflow: auto;
 }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 148, 237, 0.8);
+}
+
 .hidden {
   display: none !important;
 }

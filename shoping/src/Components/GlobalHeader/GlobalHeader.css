@@ -14,6 +14,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-top: 10px;
+  /* position: relative; */
 }
 .globalheader div {
   display: flex;
@@ -44,7 +45,13 @@
   flex-wrap: nowrap;
   width: max-content;
   margin-right: 10px;
+  font-size: large;
 }
+
+.wrapperleft > .logotip > h4::after {
+  content: "BlessedMarket";
+}
+
 .headerwrapper > .search {
   width: 100%;
   order: 2;
@@ -169,8 +176,8 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .wrapperleft > .logotip > h4 {
-    display: none !important;
+@media screen and (max-width: 450px) {
+  .wrapperleft > .logotip > h4::after {
+    content: " BM ";
   }
 }

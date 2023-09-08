@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import Catalog from "../../Pages/Catalog/Catalog";
 import "./GlobalHeader.css";
+import { useState } from "react";
+import { ClickAway } from "../ClickAway";
 
 function GlobalHeader() {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   const navigate = useNavigate();
   return (
     <div className="globalheader">
@@ -26,10 +31,20 @@ function GlobalHeader() {
                 color: "mediumslateblue",
               }}
             >
-              OFHome
+              {/* BlessedMarket */}
             </h4>
           </div>
-          <div className="catalog">
+          {
+            <ClickAway onClickAway={() => setShowModal(false)}>
+              <Catalog thisShowModal={showModal} />
+            </ClickAway>
+          }
+          <div
+            className="catalog"
+            onClick={() => {
+              setShowModal(!showModal);
+            }}
+          >
             <div>
               <i
                 className="fa-regular fa-rectangle-list"

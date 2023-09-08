@@ -1,0 +1,25 @@
+.developer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  /* background-color: cornflowerblue; */
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: 27px;
+}
+
+.developer img {
+  padding: 2px;
+  user-select: none;
+  user-select: none;
+  border-radius: 100%;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.developer img:hover {
+  filter: none;
+  border-radius: 10px;
+}

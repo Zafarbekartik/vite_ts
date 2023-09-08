@@ -39,6 +39,5 @@ export const useFetch = (url: string) => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
-  console.log(data);
   return { data, isPending, categories, categoryNames };
 };
