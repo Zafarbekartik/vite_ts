@@ -1,14 +1,95 @@
 .Account {
   max-width: 1200px;
   margin: 0px auto;
-  background-color: crimson;
-  color: #fff;
+  color: var(--txcolor);
+  box-sizing: border-box;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 5px;
+  background-color: cornflowerblue;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+.openForm {
+  height: min-content !important;
+}
+
+.Account .boxInForm {
+  margin-bottom: 20px;
+  height: 75px;
+  overflow-y: hidden;
+  border: 2px solid var(--txcolor);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 0;
+  transition: height 1s;
+}
+
+.boxInForm > form {
+  gap: 25px;
+  line-height: 25px;
   box-sizing: border-box;
   padding: 10px;
+  align-content: center;
+  padding-bottom: 20px;
+}
+
+.boxInForm > form > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Account .requeryReg {
+  background-color: crimson;
+}
+
+.boxInForm > form > label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+
+.boxInForm > form input {
+  outline: none;
+  padding: 5px 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  max-width: 300px;
+  border: 1px solid var(--txcolor);
+}
+
+.Account button {
+  outline: none;
+  padding: 5px 8px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 0;
+  width: 200px;
+  cursor: pointer;
+  justify-self: center;
+  border: 1px solid var(--txcolor);
+  background-color: cornflowerblue;
+  color: #fff;
+  user-select: none;
 }
 
 @media screen and (max-width: 800px) {
   .Account {
     margin-top: 20px;
   }
-}
+} */

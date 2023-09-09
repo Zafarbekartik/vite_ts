@@ -1,10 +1,8 @@
 .App {
   width: 100%;
   min-width: 330px;
-  /* display: flex; */
-  /* flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center; */
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 h1 {

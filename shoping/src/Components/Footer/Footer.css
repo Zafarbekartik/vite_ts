@@ -16,5 +16,6 @@
   background-color: crimson;
   text-decoration: none;
   border-radius: 5px 5px 0 0;
+  user-select: none;
   transition: 0.3s;
 }
