@@ -2,7 +2,7 @@ import useBreadcrumbs from "../../Layout/breadCrumbs/breadCrumbs";
 import { useFetch } from "../../Components/API/UseFetch/useFetch";
 import Load from "../../Components/Loading/Load";
 import { v4 as uuidv4 } from "uuid";
-import { IProduct } from "../../types";
+// import { IProduct } from "../../types";
 import "./Home.css";
 
 function Catalog() {

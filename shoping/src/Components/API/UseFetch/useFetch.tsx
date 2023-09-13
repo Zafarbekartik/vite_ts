@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IProduct } from "../../../types";
 
 export const useFetch = (url: string) => {

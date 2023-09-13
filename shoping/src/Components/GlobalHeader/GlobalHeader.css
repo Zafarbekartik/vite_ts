@@ -126,6 +126,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .globalheader {
+    margin-bottom: 20px;
+  }
   .globalheader .headerwrapper {
     margin-top: 10px;
     flex-wrap: wrap;

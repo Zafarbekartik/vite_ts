@@ -1,0 +1,47 @@
+.home {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home a {
+  color: #f1f1f1;
+  padding-bottom: 6px;
+  padding-right: 0;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+}
+
+.home a::before {
+  content: "";
+  width: calc(100% - 2px);
+  position: absolute;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  transform-origin: center;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.home a:hover {
+  color: cornflowerblue;
+}
+
+.home a:hover::before {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+.home small {
+  font-size: 18px;
+  color: gold;
+  margin-left: 5px;
+  font-weight: 500;
+}

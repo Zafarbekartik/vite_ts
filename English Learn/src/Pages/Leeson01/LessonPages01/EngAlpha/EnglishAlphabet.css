@@ -1,0 +1,24 @@
+.alphabet {
+  width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.alphabet .alphabetUl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.alphabetUl li {
+  list-style: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  user-select: none;
+}
+.alphabetUl li:hover {
+  scale: 2;
+  color: gold;
+}

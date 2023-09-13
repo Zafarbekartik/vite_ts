@@ -25,7 +25,7 @@ function App() {
       <TopCatalog />
       <Routes>
         <Route path="/*" element={<Home />} />
-        <Route path="/Account" element={<Account />} />
+        <Route path="/Account/*" element={<Account />} />
         <Route path="/Savat" element={<Savat />} />
         <Route path="/Yoqtirilgan" element={<Yoqtirilgan />} />
         <Route path="/Manzil" element={<Manzil />} />

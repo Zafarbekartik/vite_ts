@@ -1,0 +1,23 @@
+.countableNouns {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.countableUncountable {
+  width: 100%;
+  text-align: justify;
+  margin: 50px auto;
+}
+
+.countableUncountable table {
+  margin-top: 20px;
+  width: 100%;
+  /* border: 2px solid gold; */
+  text-align: center;
+  border-spacing: 5px;
+}
+.countableUncountable td {
+  border: 1px solid gold;
+  width: 50%;
+  letter-spacing: 2px;
+}

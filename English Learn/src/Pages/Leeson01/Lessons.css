@@ -1,0 +1,35 @@
+.lessons {
+  width: 100%;
+  padding: 10px;
+  line-height: 40px;
+  border: 2px dashed #f1f1f140;
+  overflow-x: auto;
+}
+
+.lessons a {
+  width: 100%;
+  color: #f1f1f1;
+  padding-bottom: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  transition: 0.3s;
+  padding: 8px;
+  border: 1px solid #2f2f2f;
+}
+
+.lessons a:hover {
+  color: cyan;
+  border: 1px solid #f1f1f140;
+}
+.lessons a.active {
+  font-size: 22px;
+  color: cyan;
+  margin: 0 10px;
+}
+
+.lessons h2 {
+  letter-spacing: 2px;
+  color: cornflowerblue;
+}

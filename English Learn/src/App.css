@@ -1,0 +1,9 @@
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #2f2f2f;
+  margin-bottom: 20px;
+}

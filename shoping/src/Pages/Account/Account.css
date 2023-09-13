@@ -2,19 +2,15 @@
   max-width: 1200px;
   margin: 0px auto;
   color: var(--txcolor);
-  box-sizing: border-box;
-  padding: 5px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 5px;
-  background-color: cornflowerblue;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
+/* input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 /* 
 .openForm {

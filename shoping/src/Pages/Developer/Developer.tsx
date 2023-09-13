@@ -20,7 +20,7 @@ function Deweloper() {
             </p>
             <pre>
               <b className="objKey"> name :</b>{" "}
-              <b className="objString"> "Zafarbek Artikboev"</b> ,
+              <b className="objString"> "Zafarbek Artikboev"</b>,
             </pre>
             <pre>
               <b className="objKey"> age :</b> <b className="objNumber"></b>{" "}
@@ -31,20 +31,20 @@ function Deweloper() {
               <b className="objKey"> city :</b>{" "}
               <b className="objString"> "Pakhtakor"</b>,
               <b className="objKey">region :</b>{" "}
-              <b className="objString closeObj"> "Jizakh"</b> ,
+              <b className="objString closeObj"> "Jizakh"</b>,
             </pre>
             <pre>
               {" "}
               <b className="objKey"> phone number </b> :{" "}
-              <b className="objString">"+998 99 022 65 71"</b> ,
+              <b className="objString">"+998 99 022 65 71"</b>,
             </pre>
             <pre>
               <b className="objKey"> email :</b>{" "}
-              <b className="objString"> "bironmanbek@gmail.com"</b> ,
+              <b className="objString"> "bironmanbek@gmail.com"</b>,
             </pre>
             <pre>
               <b className="objKey"> job : </b>{" "}
-              <b className="objString">"Frontend Developer" </b>{" "}
+              <b className="objString">"Frontend Developer"</b>,{" "}
             </pre>
             <pre>
               <b className="objKey"> jobLevel : </b>{" "}

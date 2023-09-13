@@ -1,0 +1,22 @@
+.Plural {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.Plural .pluralArticles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  text-align: justify;
+}
+
+.pluralArticles mark {
+  padding: 0 3px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: gold;
+  color: #2f2f2f;
+}
