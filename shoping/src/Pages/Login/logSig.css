@@ -1,6 +1,106 @@
 .logSig {
   width: 100%;
-  background-color: crimson;
+  margin: 0 auto;
   box-sizing: border-box;
   padding: 5px;
+  text-align: center;
+  color: #333;
+  user-select: none;
+}
+
+.logSig > form {
+  margin: 20px auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logSig > form > input {
+  outline: none;
+  height: 25px;
+  border: 1px solid #2f2f2f;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.logSig > form button {
+  outline: none;
+  height: 43px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background-color: cornflowerblue;
+  color: #fff;
+  box-shadow: 0 2px 10px 1px #63636360;
+}
+
+.logSig > form .logSigBtn {
+  border: 2px solid cornflowerblue;
+}
+
+.logSig > form button:active {
+  box-shadow: 0 2px 5px #63636330;
+}
+
+.logSig > form button:focus {
+  border: 2px solid #242424;
+}
+
+.logSig .logSigOr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #636363;
+  font-size: 14px;
+}
+
+.logSigOr p {
+  width: 40px;
+  text-align: center;
+  user-select: none;
+}
+
+.logSigOr > div {
+  background-color: #636363;
+  width: calc(50% - 20px);
+  height: 1px;
+  border: none;
+}
+.logSig > form > a {
+  margin: 0 auto;
+  width: max-content;
+  color: #333333bb;
+  padding-bottom: 6px;
+  text-decoration: none;
+  padding-bottom: 6px;
+  transition: 0.2s;
+  user-select: none;
+  position: relative;
+}
+
+.logSig > form > a:hover {
+  color: #333;
+}
+
+.logSig > form > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #333333;
+  bottom: 0;
+  left: 0;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  transition-delay: 0.15s;
+}
+.logSig > form > a:hover::before {
+  transform: scaleX(1);
 }

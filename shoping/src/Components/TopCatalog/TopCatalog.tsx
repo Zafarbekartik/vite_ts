@@ -3,7 +3,7 @@ import { useFetch } from "../API/UseFetch/useFetch";
 // import Load from "../Loading/Load";
 import { v4 as uuidv4 } from "uuid";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 function TopCatalog() {
   const { categoryNames: data } = useFetch("https://dummyjson.com/products");

@@ -1,0 +1,27 @@
+.accountRek {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+  line-height: 45px;
+  color: cornflowerblue;
+}
+
+.accountRek > div {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  animation: yunaltir 2s infinite ease-out;
+  width: 30px;
+}
+
+@keyframes yunaltir {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}

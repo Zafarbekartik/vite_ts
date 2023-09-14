@@ -1,0 +1,42 @@
+.loginWithMore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loginWithMore > button {
+  height: 43px;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  border: none;
+}
+
+.loginWithMore > button > i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  width: 30px;
+}
+
+.loginWithMore .lWFaceBook {
+  border: 2px solid #3b5998;
+  background-color: #3b5998;
+}
+
+.loginWithMore .lWGoogle {
+  background-color: #fff;
+  color: #4885ed;
+  border: 2px solid #4885ed;
+  font-weight: 500;
+}
