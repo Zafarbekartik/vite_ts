@@ -13,7 +13,7 @@
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .logSig > form > input {
@@ -21,8 +21,8 @@
   height: 25px;
   border: 1px solid #2f2f2f;
   border-radius: 4px;
-  padding: 10px;
-  font-size: 18px;
+  padding: 8px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -32,7 +32,7 @@
   border: none;
   border-radius: 4px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   background-color: cornflowerblue;
   color: #fff;
@@ -71,11 +71,27 @@
   height: 1px;
   border: none;
 }
-.logSig > form > a {
+
+.logSig > form p {
+  margin: 8px auto;
+  font-size: 14px;
+  color: #333333bb;
+}
+
+.backToLogSig::before {
+  content: "\25c2  ";
+}
+
+.logSig > form p > a {
+  color: #3b5998;
+  font-size: 15px;
+}
+
+.logSig > form a {
+  font-size: 14px;
   margin: 0 auto;
   width: max-content;
   color: #333333bb;
-  padding-bottom: 6px;
   text-decoration: none;
   padding-bottom: 6px;
   transition: 0.2s;
@@ -83,11 +99,11 @@
   position: relative;
 }
 
-.logSig > form > a:hover {
+.logSig > form a:hover {
   color: #333;
 }
 
-.logSig > form > a::before {
+.logSig > form a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -101,6 +117,7 @@
   transition: transform 0.2s ease-in-out;
   transition-delay: 0.15s;
 }
-.logSig > form > a:hover::before {
+.logSig > form a:hover::before,
+.logSig > form a:focus::before {
   transform: scaleX(1);
 }
