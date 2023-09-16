@@ -4,8 +4,10 @@ import "./logSig.css";
 import { FormEvent, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { IUsers } from "../../types";
+import { useStore } from "../../store/useStore";
 
 function Login() {
+  const setIsm = useStore((state) => state.setName);
   const [logSig, setLogSig] = useState("Login");
 
   //eslint-disable-next-line
@@ -16,7 +18,7 @@ function Login() {
   const userConfPass = useRef<HTMLInputElement>(null);
 
   const [allUsers, setAllUsers] = useState<Record<string, IUsers>>(
-    JSON.parse(localStorage.getItem("users")!) ?? {}
+    JSON.parse(localStorage.getItem("users")!) ?? {},
   );
 
   const handleSubmit = (e: FormEvent) => {
@@ -75,7 +77,15 @@ function Login() {
         {logSig == "Login" && (
           <NavLink to={"./ForgotPassword"}> Forgot Password</NavLink>
         )}
-        <button className="logSigBtn">{logSig}</button>
+        <button
+          className="logSigBtn"
+          onClick={() => {
+            const value = userPassword.current?.value ?? "Aniqlanmagan";
+            setIsm(value);
+          }}
+        >
+          {logSig}
+        </button>
         <div className="logSigOr">
           <div></div>
           <p>Or</p>

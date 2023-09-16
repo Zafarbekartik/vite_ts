@@ -1,24 +1,26 @@
-import useBreadcrumbs from "../../Layout/breadCrumbs/breadCrumbs";
-import { useFetch } from "../../Components/API/UseFetch/useFetch";
-import Load from "../../Components/Loading/Load";
-import { v4 as uuidv4 } from "uuid";
+import Load from "../../Components/Loading/Load"
+import { v4 as uuidv4 } from "uuid"
+import { useProducts } from "../../store/useProducts"
 // import { IProduct } from "../../types";
-import "./Home.css";
-
+import "./Home.css"
+import { useEffect } from "react"
 function Catalog() {
-  const crumbs = useBreadcrumbs();
-  const { categories, isPending, data } = useFetch(
-    "https://dummyjson.com/products"
-  );
-  const category = crumbs.length ? categories[crumbs[0]] : data;
-
+  const { fetch, products, categoryNames, loading } = useProducts((state) => ({
+    products: state.products,
+    categoryNames: state.categoryNames,
+    loading: state.productsLoading,
+    fetch: state.fetchProducts,
+  }))
+  useEffect(() => {
+    void fetch()
+  }, [fetch])
   return (
     <div className="CatalogBox">
-      {isPending ? (
+      {loading ? (
         <Load />
       ) : (
-        category &&
-        category.map((product) => (
+        categoryNames &&
+        cate.map((product) => (
           <div className="product" key={uuidv4()}>
             <img src={product.images[0]} alt={product.title} />
             <h3>{product.title}</h3>
@@ -29,7 +31,7 @@ function Catalog() {
         ))
       )}
     </div>
-  );
+  )
 }
 
-export default Catalog;
+export default Catalog

@@ -1,8 +1,11 @@
 // import { useEffect } from "react";
 import { IUsers } from "../../types";
 import "./Users.css";
+import { useStore } from "../../store/useStore";
 
 function Users() {
+  const name = useStore((state) => state.name);
+
   const allUsers: Record<string, IUsers> =
     JSON.parse(localStorage.getItem("users")!) ?? {};
 
@@ -17,7 +20,7 @@ function Users() {
           );
         })
       ) : (
-        <h1>No users yet</h1>
+        <h1>{name}</h1>
       )}
     </div>
   );

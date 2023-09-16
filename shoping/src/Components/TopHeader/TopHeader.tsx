@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
 import "./TopHeader.css";
+import { useStore } from "../../store/useStore";
 
 function TopHeader() {
+  const ismim = useStore((state) => state.name);
   const navigate = useNavigate();
   return (
     <div className="topheaderbox">
@@ -39,7 +41,7 @@ function TopHeader() {
             <p>Buyurtmalarim</p>
           </div>
           <div className="item6">
-            <p>Tilni tanlash</p>
+            <p>{ismim}</p>
           </div>
         </div>
       </div>
