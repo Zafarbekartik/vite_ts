@@ -13,15 +13,9 @@ export interface IProduct {
 }
 
 export interface IUsers {
-  name: string;
-  telNumber: number;
-  password: string;
+  uEmail: string | undefined;
+  uPassword: string | undefined;
+  uConfPass: string | undefined;
   id: string;
-  active: boolean;
   admin: boolean;
-}
-
-export interface IOpenRegBox {
-  kirish: boolean;
-  registratsiya: boolean;
 }

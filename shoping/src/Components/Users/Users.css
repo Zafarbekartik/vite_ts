@@ -1,0 +1,25 @@
+.usersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.usersWrapper p {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  height: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.usersWrapper p:hover {
+  scale: 1.01;
+}
+
+.userDataAdmin {
+  color: crimson;
+  border: 1px solid crimson;
+}
