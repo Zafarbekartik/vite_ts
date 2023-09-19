@@ -1,37 +1,58 @@
-import Load from "../../Components/Loading/Load"
-import { v4 as uuidv4 } from "uuid"
-import { useProducts } from "../../store/useProducts"
-// import { IProduct } from "../../types";
-import "./Home.css"
 import { useEffect } from "react"
-function Catalog() {
-  const { fetch, products, categoryNames, loading } = useProducts((state) => ({
-    products: state.products,
-    categoryNames: state.categoryNames,
-    loading: state.productsLoading,
-    fetch: state.fetchProducts,
-  }))
+import { useProducts } from "../../store/useProducts"
+import useBreadcrumbs from "../../Layout/breadCrumbs/breadCrumbs"
+import Load from "../../Components/Loading/Load"
+import { shallow } from "zustand/shallow"
+import "./Home.css"
+
+function Home() {
+  const { fetch, products, loading, categories } = useProducts(
+    (state) => ({
+      products: state.products,
+      categories: state.categories,
+      loading: state.productsLoading,
+      fetch: state.fetchProducts,
+    }),
+    shallow
+  )
   useEffect(() => {
     void fetch()
   }, [fetch])
+
+  const crumbs = useBreadcrumbs()
+  const [category] = crumbs
+
   return (
     <div className="CatalogBox">
-      {loading ? (
+      {loading == true ? (
         <Load />
+      ) : category ? (
+        categories[category].map((product) => {
+          return (
+            <div className="product" key={product.id}>
+              <img src={product.images[0]} alt={product.title} />
+              <h3>{product.title}</h3>
+              <p>
+                <b>Price</b> - {product.price}$
+              </p>
+            </div>
+          )
+        })
       ) : (
-        categoryNames &&
-        cate.map((product) => (
-          <div className="product" key={uuidv4()}>
-            <img src={product.images[0]} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>
-              <b>Price</b> - {product.price}$
-            </p>
-          </div>
-        ))
+        products.map((product) => {
+          return (
+            <div className="product" key={product.id}>
+              <img src={product.images[0]} alt={product.title} />
+              <h3>{product.title}</h3>
+              <p>
+                <b>Price</b> - {product.price}$
+              </p>
+            </div>
+          )
+        })
       )}
     </div>
   )
 }
 
-export default Catalog
+export default Home

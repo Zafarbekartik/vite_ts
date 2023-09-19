@@ -1,29 +1,33 @@
-import { useFetch } from "../../Components/API/UseFetch/useFetch";
-import { NavLink } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
-
-import "./Catalog.css";
+import { NavLink } from "react-router-dom"
+import { v4 as uuidv4 } from "uuid"
+import "./Catalog.css"
+import { useProducts } from "../../store/useProducts"
+import { shallow } from "zustand/shallow"
 
 function Catalog({ thisShowModal }: { thisShowModal: boolean }) {
-  const { categoryNames: data, isPending } = useFetch(
-    "https://dummyjson.com/products"
-  );
+  const { names, loading } = useProducts(
+    (state) => ({
+      names: state.categoryNames,
+      loading: state.productsLoading,
+    }),
+    shallow
+  )
   return (
     <div className={thisShowModal ? "modalCatalog" : "modalCatalog hidden"}>
-      {!isPending && (
+      {!loading && (
         <ul className="mCUl">
-          {data &&
-            data.map((product) => {
+          {names &&
+            names.map((product) => {
               return (
                 <li key={uuidv4()} className="modalLi">
                   <NavLink to={"/" + product}>{product}</NavLink>
                 </li>
-              );
+              )
             })}
         </ul>
       )}
     </div>
-  );
+  )
 }
 
-export default Catalog;
+export default Catalog

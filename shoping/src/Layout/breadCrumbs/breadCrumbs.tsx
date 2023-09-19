@@ -1,11 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom"
 
 function useBreadcrumbs() {
-  const location = useLocation();
+  const location = useLocation()
 
-  const crumbs = location.pathname.split("/").filter((crumb) => crumb !== "");
+  const crumbs: string[] | "" = location.pathname
+    .split("/")
+    .filter((crumb) => crumb !== "")
 
-  return crumbs;
+  return crumbs
 }
 
-export default useBreadcrumbs;
+export default useBreadcrumbs

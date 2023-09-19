@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
-import "./TopHeader.css";
-import { useStore } from "../../store/useStore";
+import "./TopHeader.css"
+// import { useStore } from "../../store/useStore"
 
 function TopHeader() {
-  const ismim = useStore((state) => state.name);
-  const navigate = useNavigate();
+  // const ismim = useStore((state) => state.name)
+  const navigate = useNavigate()
   return (
     <div className="topheaderbox">
       <div>
@@ -16,7 +16,7 @@ function TopHeader() {
           <div
             className="item2"
             onClick={() => {
-              navigate("/Manzil");
+              navigate("/Manzil")
             }}
           >
             <p>Manzil</p>
@@ -27,7 +27,7 @@ function TopHeader() {
           <div
             className="item4"
             onClick={() => {
-              navigate("/SavolJavob");
+              navigate("/SavolJavob")
             }}
           >
             <p>Savol-Javoblar</p>
@@ -35,18 +35,18 @@ function TopHeader() {
           <div
             className="item5"
             onClick={() => {
-              navigate("/Buyurtmalarim");
+              navigate("/Buyurtmalarim")
             }}
           >
             <p>Buyurtmalarim</p>
           </div>
           <div className="item6">
-            <p>{ismim}</p>
+            <p>{"Tilni tanlash"}</p>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default TopHeader;
+export default TopHeader

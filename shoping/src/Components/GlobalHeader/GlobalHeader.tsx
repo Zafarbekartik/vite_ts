@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import Catalog from "../../Pages/Catalog/Catalog";
-import "./GlobalHeader.css";
-import { useState } from "react";
-import { ClickAway } from "../ClickAway";
+import { useNavigate } from "react-router-dom"
+import Catalog from "../../Pages/Catalog/Catalog"
+import "./GlobalHeader.css"
+import { useState } from "react"
+import { ClickAway } from "../ClickAway"
 
 function GlobalHeader() {
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false)
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <div className="globalheader">
       <div className="headerwrapper">
@@ -15,7 +15,7 @@ function GlobalHeader() {
           <div
             className="logotip"
             onClick={() => {
-              navigate("/");
+              navigate("/")
             }}
           >
             <h3
@@ -42,7 +42,7 @@ function GlobalHeader() {
           <div
             className="catalog"
             onClick={() => {
-              setShowModal(!showModal);
+              setShowModal(!showModal)
             }}
           >
             <div>
@@ -74,7 +74,7 @@ function GlobalHeader() {
           <div
             className="profil"
             onClick={() => {
-              navigate("/Account");
+              navigate("/Account")
             }}
           >
             <div className="btn">
@@ -90,7 +90,7 @@ function GlobalHeader() {
           <div
             className="likedaproducts"
             onClick={() => {
-              navigate("/Yoqtirilgan");
+              navigate("/Yoqtirilgan")
             }}
           >
             <div className="btn">
@@ -113,7 +113,7 @@ function GlobalHeader() {
           <div
             className="basket"
             onClick={() => {
-              navigate("/Savat");
+              navigate("/Savat")
             }}
           >
             <div className="btn">
@@ -136,7 +136,7 @@ function GlobalHeader() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default GlobalHeader;
+export default GlobalHeader
