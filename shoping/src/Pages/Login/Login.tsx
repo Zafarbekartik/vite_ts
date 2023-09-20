@@ -1,58 +1,58 @@
-import { NavLink } from "react-router-dom";
-import LoginWithMore from "../../Components/LoginWithMore/LoginWithMore";
-import "./logSig.css";
-import { FormEvent, useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { IUsers } from "../../types";
-import { useStore } from "../../store/useStore";
+import { NavLink } from "react-router-dom"
+import LoginWithMore from "../../Components/LoginWithMore/LoginWithMore"
+import "./logSig.css"
+import { FormEvent, useRef, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
+import { IUsers } from "../../types"
+import { useStore } from "../../store/useStore"
 
 function Login() {
-  const setIsm = useStore((state) => state.setName);
-  const [logSig, setLogSig] = useState("Login");
+  const allUsers = useStore<Record<string, IUsers>>((state) => state.users)
+  const setAllUsers = useStore((state) => state.setUsers)
+
+  console.log(allUsers)
+  const [logSig, setLogSig] = useState("Login")
 
   //eslint-disable-next-line
-  const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
 
-  const userEmail = useRef<HTMLInputElement>(null);
-  const userPassword = useRef<HTMLInputElement>(null);
-  const userConfPass = useRef<HTMLInputElement>(null);
-
-  const [allUsers, setAllUsers] = useState<Record<string, IUsers>>(
-    JSON.parse(localStorage.getItem("users")!) ?? {},
-  );
+  const userEmail = useRef<HTMLInputElement>(null)
+  const userPassword = useRef<HTMLInputElement>(null)
+  const userConfPass = useRef<HTMLInputElement>(null)
 
   const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     const userData: IUsers = {
       uEmail: userEmail.current?.value,
       uPassword: userPassword.current?.value,
       uConfPass: userConfPass.current?.value,
       admin: JSON.parse(localStorage.getItem("users")!) ? false : true,
       id: uuidv4(),
-    };
+    }
 
     if (
       userData.uPassword == userData.uConfPass &&
       regEx.test(userData.uEmail!) &&
       !allUsers[userData.uEmail!]
     ) {
-      setAllUsers((prev) => {
-        return { ...prev, [userData.uEmail!]: userData };
-      });
-      console.log(allUsers);
-      localStorage.setItem("users", JSON.stringify(allUsers));
-      userEmail.current!.value = "";
-      userPassword.current!.value = "";
-      userConfPass.current!.value = "";
+      const renamed: Record<string, IUsers> = {
+        [userData.uEmail!]: userData,
+      }
+      setAllUsers(renamed)
+      console.log(allUsers)
+      localStorage.setItem("users", JSON.stringify(allUsers))
+      userEmail.current!.value = ""
+      userPassword.current!.value = ""
+      userConfPass.current!.value = ""
     }
 
     if (
       allUsers[userData.uEmail!] &&
       allUsers[userData.uEmail!].uPassword == userData.uPassword
     )
-      console.log(allUsers[userData.uEmail!].id);
-    else console.log("Email yoki parol kiritishda hatolik bor");
-  };
+      console.log(allUsers[userData.uEmail!].id)
+    else console.log("Email yoki parol kiritishda hatolik bor")
+  }
 
   return (
     <div className="logSig">
@@ -77,15 +77,7 @@ function Login() {
         {logSig == "Login" && (
           <NavLink to={"./ForgotPassword"}> Forgot Password</NavLink>
         )}
-        <button
-          className="logSigBtn"
-          onClick={() => {
-            const value = userPassword.current?.value ?? "Aniqlanmagan";
-            setIsm(value);
-          }}
-        >
-          {logSig}
-        </button>
+        <button className="logSigBtn">{logSig}</button>
         <div className="logSigOr">
           <div></div>
           <p>Or</p>
@@ -97,7 +89,7 @@ function Login() {
             <NavLink
               to={""}
               onClick={() => {
-                setLogSig("Signup");
+                setLogSig("Signup")
               }}
             >
               {" Signup"}
@@ -110,7 +102,7 @@ function Login() {
             <NavLink
               to={""}
               onClick={() => {
-                setLogSig("Login");
+                setLogSig("Login")
               }}
             >
               {" Login"}
@@ -121,7 +113,7 @@ function Login() {
         <LoginWithMore />
       </form>
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login

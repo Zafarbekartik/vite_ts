@@ -1,11 +1,12 @@
 import { create } from "zustand"
+import { IUsers } from "../types"
 
-interface IProductStore {
-  name: string
-  setName: (name: string) => void
+interface IUsersStore {
+  users: Record<string, IUsers>
+  setUsers: (users: Record<string, IUsers>) => void
 }
 
-export const useStore = create<IProductStore>((set) => ({
-  name: "Allayor",
-  setName: (name) => set({ name }),
+export const useStore = create<IUsersStore>((set) => ({
+  users: JSON.parse(localStorage.getItem("users")!) ?? {},
+  setUsers: (users) => set({ ...users, users }),
 }))
