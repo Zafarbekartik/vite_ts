@@ -1,7 +1,7 @@
-import { persist, createJSONStorage, devtools } from "zustand/middleware"
 import { IProduct } from "../types"
 import { createWithEqualityFn } from "zustand/traditional"
 import { shallow } from "zustand/shallow"
+import { persist, createJSONStorage, devtools } from "zustand/middleware"
 
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
