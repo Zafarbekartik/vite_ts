@@ -1,6 +1,7 @@
-import { create } from "zustand"
 import { persist, createJSONStorage, devtools } from "zustand/middleware"
 import { IProduct } from "../types"
+import { createWithEqualityFn } from "zustand/traditional"
+import { shallow } from "zustand/shallow"
 
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
@@ -12,7 +13,7 @@ export interface IUseProduct {
   fetchProducts: () => void
 }
 
-export const useProducts = create<IUseProduct>()(
+export const useProducts = createWithEqualityFn<IUseProduct>()(
   devtools(
     persist(
       (set, get) => ({
@@ -53,5 +54,6 @@ export const useProducts = create<IUseProduct>()(
       }
     ),
     { name: "PRODUCTS_DEBUG" }
-  )
+  ),
+  shallow
 )

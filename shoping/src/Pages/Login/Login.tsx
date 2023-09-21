@@ -10,7 +10,6 @@ function Login() {
   const allUsers = useStore<Record<string, IUsers>>((state) => state.users)
   const setAllUsers = useStore((state) => state.setUsers)
 
-  console.log(allUsers)
   const [logSig, setLogSig] = useState("Login")
 
   //eslint-disable-next-line
