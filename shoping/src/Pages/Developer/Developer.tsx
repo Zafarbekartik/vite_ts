@@ -1,7 +1,8 @@
-import "./Developer.css";
-import devImage from "./dev.png";
+import "./Developer.css"
+import devImage from "./dev.png"
 
 function Deweloper() {
+  console.log("Developer page")
   return (
     <div className="developer">
       <div className="devAbout">
@@ -72,7 +73,7 @@ function Deweloper() {
         </p> */}
       </div>
     </div>
-  );
+  )
 }
 
-export default Deweloper;
+export default Deweloper

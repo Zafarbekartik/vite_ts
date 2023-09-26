@@ -1,18 +1,19 @@
-import { FormEvent } from "react";
-import "./ForgotPassword.css";
-import { NavLink } from "react-router-dom";
+import { FormEvent } from "react"
+import "./ForgotPassword.css"
+import { NavLink } from "react-router-dom"
 
 function ForgotPassword() {
+  console.log("Forgot password")
   const handleSubmit = (e: FormEvent) => {
-    e.stopPropagation();
-  };
+    e.stopPropagation()
+  }
 
   return (
     <div className="logSig">
       <p>! Hisobni tiklash uchun emailingizga ishonch kodlari yuboriladi</p>
       <form
         onSubmit={(e) => {
-          handleSubmit(e);
+          handleSubmit(e)
         }}
       >
         <input type="email" placeholder="email" required />
@@ -22,7 +23,7 @@ function ForgotPassword() {
         </p>
       </form>
     </div>
-  );
+  )
 }
 
-export default ForgotPassword;
+export default ForgotPassword

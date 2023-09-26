@@ -4,6 +4,7 @@ import "./TopHeader.css"
 // import { useStore } from "../../store/useStore"
 
 function TopHeader() {
+  console.log("Top Header")
   // const ismim = useStore((state) => state.name)
   const navigate = useNavigate()
   return (

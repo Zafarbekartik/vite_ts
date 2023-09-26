@@ -6,6 +6,7 @@ import { shallow } from "zustand/shallow"
 import { useEffect } from "react"
 
 function TopCatalog() {
+  console.log("Top Catalog")
   const { categoryNames, fetch } = useProducts(
     (state) => ({
       categoryNames: state.categoryNames,

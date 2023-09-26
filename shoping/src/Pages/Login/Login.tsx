@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom"
 import LoginWithMore from "../../Components/LoginWithMore/LoginWithMore"
 import "./logSig.css"
-import { FormEvent, useEffect, useRef, useState } from "react"
+import { FormEvent, useRef, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
 import { IUsers } from "../../types"
 import { useStore } from "../../store/useStore"
 
 function Login() {
+  console.log("Login page")
   const allUsers = useStore<Record<string, IUsers>>((state) => state.users)
   const setAllUsers = useStore((state) => state.setUsers)
 

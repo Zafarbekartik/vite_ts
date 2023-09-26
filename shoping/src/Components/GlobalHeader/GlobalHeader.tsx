@@ -5,6 +5,7 @@ import { useState } from "react"
 import { ClickAway } from "../ClickAway"
 
 function GlobalHeader() {
+  console.log("Global Header")
   const [showModal, setShowModal] = useState<boolean>(false)
 
   const navigate = useNavigate()

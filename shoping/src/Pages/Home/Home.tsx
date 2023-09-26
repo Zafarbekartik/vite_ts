@@ -6,6 +6,7 @@ import { shallow } from "zustand/shallow"
 import "./Home.css"
 
 function Home() {
+  console.log("Home page for Products")
   const { fetch, products, loading, categories } = useProducts(
     (state) => ({
       products: state.products,

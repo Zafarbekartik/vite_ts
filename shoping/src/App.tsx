@@ -1,26 +1,26 @@
 //styles
-import "./App.css";
+import "./App.css"
 //conmponents
-import Header from "./Components/TopHeader/TopHeader";
-import GlobalHeader from "./Components/GlobalHeader/GlobalHeader";
-import TopCatalog from "./Components/TopCatalog/TopCatalog";
-import Home from "./Pages/Home/Home";
-import Account from "./Pages/Account/Account";
-import Savat from "./Pages/Savat/Savat";
-import Yoqtirilgan from "./Pages/Yoqtirilgan/Yoqtirilgan";
-import Manzil from "./Pages/Manzil/Manzil";
-import Buyurtmalarim from "./Pages/Buyurtmalarim/Buyurtmalarim";
-import SavolJavob from "./Pages/SavolJavoblar/SavolJavob";
+import TopHeader from "./Components/TopHeader/TopHeader"
+import GlobalHeader from "./Components/GlobalHeader/GlobalHeader"
+import TopCatalog from "./Components/TopCatalog/TopCatalog"
+import Home from "./Pages/Home/Home"
+import Account from "./Pages/Account/Account"
+import Savat from "./Pages/Savat/Savat"
+import Yoqtirilgan from "./Pages/Yoqtirilgan/Yoqtirilgan"
+import Manzil from "./Pages/Manzil/Manzil"
+import Buyurtmalarim from "./Pages/Buyurtmalarim/Buyurtmalarim"
+import SavolJavob from "./Pages/SavolJavoblar/SavolJavob"
 
 //React-Router-Dom
-import { Routes, Route } from "react-router-dom";
-import Footer from "./Components/Footer/Footer";
-import Developer from "./Pages/Developer/Developer";
+import { Routes, Route } from "react-router-dom"
+import Footer from "./Components/Footer/Footer"
+import Developer from "./Pages/Developer/Developer"
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <TopHeader />
       <GlobalHeader />
       <TopCatalog />
       <Routes>
@@ -35,7 +35,7 @@ function App() {
       </Routes>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

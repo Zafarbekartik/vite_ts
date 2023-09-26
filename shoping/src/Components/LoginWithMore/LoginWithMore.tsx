@@ -1,5 +1,6 @@
-import "./LoginWithMore.css";
+import "./LoginWithMore.css"
 function LoginWithMore() {
+  console.log("Login with more")
   return (
     <div className="loginWithMore">
       <button className="lWFaceBook" type="button">
@@ -10,7 +11,7 @@ function LoginWithMore() {
         Login with Google
       </button>
     </div>
-  );
+  )
 }
 
-export default LoginWithMore;
+export default LoginWithMore
